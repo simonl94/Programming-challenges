@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +17,9 @@ namespace _00NameGenerator
             InitializeComponent();
         }
 
-        private static Random rand = new Random(DateTime.Now.Second);
-
-        string[] maleNames = { "Simon", "Paul", "George", "Sam", "Pete", "John", "Daniel", "Ben" };
-        string[] femaleNames = { "Sally", "Lucy", "Georgia", "Abby", "Candy", "Samantha", "Holly" };
-        string[] lastNames = { "Hill", "Foreman", "Lee", "Adams", "Hall", "Shore", "Rogers" };
+        string[] maleNames = { "Simon", "Paul", "George", "Sam", "Pete", "John", "Daniel", "Ben" }; //Male names
+        string[] femaleNames = { "Sally", "Lucy", "Georgia", "Abby", "Candy", "Samantha", "Holly" }; //Female names
+        string[] lastNames = { "Hill", "Foreman", "Lee", "Adams", "Hall", "Shore", "Rogers" }; //Last names
         string firstName;
         string lastName;
         string firstName2;
@@ -36,24 +34,24 @@ namespace _00NameGenerator
         public void generate_Click(object sender, EventArgs e)
         {
 
-            DialogResult dialogResult = MessageBox.Show("Are you a male?", "Gender", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            DialogResult dialogResult = MessageBox.Show("Are you a male?", "Gender", MessageBoxButtons.YesNo); //Prompts a yes or no window for male
+            if (dialogResult == DialogResult.Yes) //If the user clicks 'yes'
             {
-                firstName = (maleNames[rnd.Next(8)]);
-                lastName = (lastNames[rnd.Next(7)]);
-                MessageBox.Show(firstName + " " + lastName);
+                firstName = (maleNames[rnd.Next(8)]); //Picks a random name from the 8 maleNames array
+                lastName = (lastNames[rnd.Next(7)]); //Picks a random name from the 7 lastNames array
+                MessageBox.Show(firstName + " " + lastName); //Shows a message box with the random firstName and lastName
                 }
             
-            else if (dialogResult == DialogResult.No)
+            else if (dialogResult == DialogResult.No) //If the user clicks 'no'
             {
-                DialogResult dialogResult2 = MessageBox.Show("Are you a female?", "Gender", MessageBoxButtons.YesNo);
-                if (dialogResult2 == DialogResult.Yes)
+                DialogResult dialogResult2 = MessageBox.Show("Are you a female?", "Gender", MessageBoxButtons.YesNo); //Prompts a yes or no window for female
+                if (dialogResult2 == DialogResult.Yes) //If the user clicks 'yes'
                 {
-                    firstName2 = (femaleNames[rnd.Next(7)]);
-                    lastName2 = (lastNames[rnd.Next(7)]);
-                    MessageBox.Show(firstName2 + " " + lastName2); 
+                    firstName2 = (femaleNames[rnd.Next(7)]); //Picks a random name from the 7 femaleNames array
+                    lastName2 = (lastNames[rnd.Next(7)]); //Picks a random name from the 7 lastNames array
+                    MessageBox.Show(firstName2 + " " + lastName2); //Shows a message box with the random firstName and lastName
                 }
-            }
+            } //Returns to the 'generate' button form
         }
     }
 }
