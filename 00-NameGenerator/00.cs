@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace _00NameGenerator
 {
+    //programming challenge 00 NameGenerator  //@github/simonl94
+    
     public partial class Form1 : Form
     {
         public Form1()
