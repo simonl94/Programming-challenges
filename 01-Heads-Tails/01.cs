@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace _01HeadsAndTails
 {
+    //programming challenge 01 Heads&Tails  //@github/simonl94
+    
     public partial class Form1 : Form
     {
         public Form1()
