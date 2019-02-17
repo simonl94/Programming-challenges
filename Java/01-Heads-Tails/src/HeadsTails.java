@@ -1,10 +1,8 @@
-import java.util.Random;
-
 public class HeadsTails {
 
     public static void main(String[] args) {
-        Random rnd = new Random();
-        int result = rnd.nextInt(2);
+
+        int result = (Math.random() <= 0.5) ? 1 : 2;
 
         if(result == 1)
             System.out.println("It's heads!");
