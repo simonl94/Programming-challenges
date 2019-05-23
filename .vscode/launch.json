@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NameGenerator",
+            "request": "launch",
+            "console": "externalTerminal",
+            "stopOnEntry": false,
+            "mainClass": "NameGenerator",
+            "projectName": "Programming-challenges_67176e20",
+            "args": ""
+        }
+    ]
+}
